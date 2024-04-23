@@ -23,3 +23,18 @@ plt.plot(xary, func1(xary, *popt_1),linestyle='--')
 plt.scatter(xary,yary,marker='.',c='r',s=1)
 plt.show()
 print("拟合的曲线为：T=3764-{}*(x-9)^2".format((popt_1[0])))
+i=1
+m = 1
+residual=0
+def U(m):
+    global xary
+    return xary[m]
+while i < 231:
+    if U(m)-U(m+1)<=0.05 and U(m)-U(m+1)!=0:
+        residual += abs((yary[m]-func1(xary, *popt_1)[m])/yary[m])
+        i=i+1
+        m = m + 1
+    else:
+        m=m+1
+        continue
+resid (residual_fin)
