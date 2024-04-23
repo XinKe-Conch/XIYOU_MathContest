@@ -4,7 +4,7 @@ import numpy as np
 from scipy.optimize import curve_fit
 # 从Excel文件中读取数据
 file_path = "CUMCM2016-C-Appendix-Chinese.xlsx"
-df = pd.read_excel(file_path, skiprows=1,sheet_name="附件1    ")  # 跳过第一行
+df = pd.read_excel(file_path ,sheet_name="附件1    ")
 
 # 将数据转换为浮点数
 df = df.astype(float)
